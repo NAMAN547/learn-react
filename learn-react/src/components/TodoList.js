@@ -2,13 +2,13 @@ import React from 'react';
 
 const Todos = [
 
-    { name: "sleeping", isDone: true},
+    { name: "sleeping", isCompleted: true},
     
-    { name: "eating", isDone:false},
+    { name: "eating", isCompleted:false},
 
-    { name: "instagram", isDone: true},
+    { name: "instagram", isCompleted: true},
 
-    { name: "playing", isDone: false}
+    { name: "playing", isCompleted: false}
 
 ]
 
@@ -18,12 +18,8 @@ const TodoList = () => {
     <ul>
         {
 
-    Todos.map((todo)=> {
-
-     return  <li> {todo.name} </li>
-
-      })
-
+     Todos.map((todo)=> <li> {todo.name}, <input type='checkbox' defaultChecked={todo.isCompleted}></input> </li> )
+ 
     }     
     </ul>
        
