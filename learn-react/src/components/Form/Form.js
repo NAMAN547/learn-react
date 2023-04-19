@@ -42,8 +42,11 @@ const Form = (props) => {
 
     console.log(name)
     console.log(price)
-    console.log(url)
+    console.log(url);
 
+    setName("")
+    setPrice(0)
+    setUrl("")
 
     }
 
@@ -54,21 +57,21 @@ const Form = (props) => {
         <div>
 
             <label htmlFor="name">Product Name</label>
-            <input onChange={nameChangeHandler} type='text' id='product' placeholder='name'></input>
+            <input onChange={nameChangeHandler} value={name} type='text' id='product' placeholder='name'></input>
 
         </div>
 
         <div>
 
 <label htmlFor="price">Price</label>
-<input onChange={priceChangeHandler} type='number' id='price' placeholder='price'></input>
+<input onChange={priceChangeHandler} value={price} type='number' id='price' placeholder='price'></input>
 
 
 </div>
 <div>
 
 <label htmlFor="image">Image Url</label>
-<input onChange={urlChangeHandler} type='text' id='image' placeholder='image'></input>
+<input onChange={urlChangeHandler} type='text' value={url} id='image' placeholder='image'></input>
 
 
 </div>
