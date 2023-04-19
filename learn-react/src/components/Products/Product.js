@@ -1,4 +1,5 @@
 import React,{useState} from 'react'
+import "./Product.css"
 
 const Product = (props) => {
 
@@ -19,8 +20,10 @@ const Product = (props) => {
         setPrice(100)
     }
 
+ 
+
   return (
-        <figure style={{width:"200px", border:"2px solid black", padding:"10px"}}>
+        <figure className='product' style={{width:"200px", border:"2px solid black", padding:"10px"}}>
 
             <img style={{width:"100%"}} src={props.image} alt={props.name}></img>
 

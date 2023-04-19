@@ -1,9 +1,11 @@
-import React from 'react'
+import React,{useState} from 'react'
 import Product from "../Products/Product"
+import Form from '../Form/Form'
+
 
 const ShoppingList = () => {
 
-    const products = [
+    const initialProducts = [
 
         {
             name: "iphone 11",
@@ -24,10 +26,23 @@ const ShoppingList = () => {
         }
     ]
 
+    const [products, setProducts] = useState(initialProducts)
+
+    const addProduct = (product) =>{
+
+
+        return setProducts([...initialProducts, product])
+
+    }
+
 
   return (
         <div>
 
+            <Form addProduct={addProduct} />
+
+
+    
             {
 
     products.map((product)=>{
